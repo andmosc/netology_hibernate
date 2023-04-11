@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-tag-v001
+      author: AndMosc
+  - include:
+      file: create-table-person.sql
+      relativeToChangelogFile: true
+  - include:
+      file: insert-value-table-person.sql
+      relativeToChangelogFile: true
