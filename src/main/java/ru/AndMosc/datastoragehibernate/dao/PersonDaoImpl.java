@@ -1,8 +1,6 @@
 package ru.AndMosc.datastoragehibernate.dao;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.TypedQuery;
+import jakarta.persistence.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ru.AndMosc.datastoragehibernate.model.Person;
