@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-orders
+      author: Andrey Moscovets
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: customer_id
+                  type: int
+                  constraints:
+                    foreignKeyName: orders_customres_id_fk
+                    referencedTableName: customers
+                    referencedColumnNames: id
+                    deleteCascade: true
+              - column:
+                  name: product_name
+                  type: varchar(200)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: amount
+                  type: int
+              - column:
+                  name: date
+                  type: date
+

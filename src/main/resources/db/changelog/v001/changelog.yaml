@@ -8,3 +8,15 @@ databaseChangeLog:
   - include:
       file: insert-value-table-person.sql
       relativeToChangelogFile: true
+  - include:
+      file: create-table-customers.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create-table-orders.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: insert-value-table-customers.sql
+      relativeToChangelogFile: true
+  - include:
+      file: insert-value-table-orders.sql
+      relativeToChangelogFile: true
