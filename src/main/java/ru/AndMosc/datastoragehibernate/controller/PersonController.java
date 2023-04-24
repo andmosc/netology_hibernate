@@ -16,8 +16,23 @@ import java.util.List;
 public class PersonController {
     private final PersonServicesImpl personServices;
 
+    @GetMapping
+    public List<Person> getAllPersons() {
+        return personServices.getAllPersons();
+    }
     @GetMapping("/by-city")
-    public List<Person> getPersonsByCity(@RequestParam(value = "city") String city) {
+    public List<Person> getPersonsByCity(@RequestParam("city") String city) {
         return personServices.getPersonsByCity(city);
+    }
+
+    @GetMapping("/by-age-less")
+    public List<Person> getPersonsByAgeLessThan(@RequestParam("age") Integer age) {
+        return personServices.getPersonsByAgeLessThan(age);
+    }
+
+    @GetMapping("/by-name-surname")
+    public Person getPersonsByNameAndSurname(@RequestParam("name") String name,
+                                             @RequestParam("surname") String surname) {
+        return personServices.getPersonByNameAndSurname(name, surname);
     }
 }
