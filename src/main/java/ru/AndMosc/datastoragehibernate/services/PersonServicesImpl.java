@@ -6,7 +6,6 @@ import ru.AndMosc.datastoragehibernate.dao.PersonDao;
 import ru.AndMosc.datastoragehibernate.model.Person;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -19,12 +18,12 @@ public class PersonServicesImpl implements PersonServices {
     }
 
     public List<Person> getPersonsByCity(String city) {
-        return personDao.findAllByCityOfLiving(city);
+        return personDao.getAllByCityOfLiving(city);
     }
 
     @Override
     public List<Person> getPersonsByAgeLessThan(Integer age) {
-        return personDao.findAllByPersonDataAgeLessThanOrderByPersonDataAge(age);
+        return personDao.getAllByPersonDataAgeLessThanOrderByPersonDataAge(age);
     }
 
     @Override

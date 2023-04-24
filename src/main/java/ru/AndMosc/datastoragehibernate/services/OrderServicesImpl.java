@@ -2,7 +2,7 @@ package ru.AndMosc.datastoragehibernate.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.AndMosc.datastoragehibernate.dao.OrderDaoImpl;
+import ru.AndMosc.datastoragehibernate.dao.OrderDao;
 import ru.AndMosc.datastoragehibernate.model.Order;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderServicesImpl implements OrderServices {
 
-    private final OrderDaoImpl orderDao;
+    private final OrderDao orderDao;
 
     @Override
     public List<Order> getProductName(String name) {
