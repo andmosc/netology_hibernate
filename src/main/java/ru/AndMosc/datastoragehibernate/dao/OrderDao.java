@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface OrderDao extends JpaRepository<Order, Integer> {
     @Query(value = "select o.productName from Order o left join Customer c ON o.customer = c.id WHERE c.name = :name")
-    List<Order> getProductName(@Param("name") String name);
+    List<String> getProductName(@Param("name") String name);
 }

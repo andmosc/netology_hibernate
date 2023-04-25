@@ -5,6 +5,6 @@ import ru.AndMosc.datastoragehibernate.model.Order;
 import java.util.List;
 
 public interface OrderServices {
-    List<Order> getProductName(String name);
+    List<String> getProductName(String name);
 }
 

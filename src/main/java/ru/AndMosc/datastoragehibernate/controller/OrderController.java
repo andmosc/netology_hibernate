@@ -16,7 +16,7 @@ public class OrderController {
     private final OrderServices orderServices;
 
     @RequestMapping("/fetch-product")
-    public List<Order> getProductName(@RequestParam(name = "name") String name) {
+    public List<String> getProductName(@RequestParam(name = "name") String name) {
         return orderServices.getProductName(name);
     }
 
